@@ -1,1 +1,12 @@
-[]
+[
+    {
+        "id": 1,
+        "nombre": "Pull up",
+        "tipo": "Fuerza"
+    },
+    {
+        "id": 2,
+        "nombre": "Sentadilla",
+        "tipo": "Fuerza"
+    }
+]
