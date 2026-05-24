@@ -1,5 +1,5 @@
-from vista import EntrenamientoVista
+from vista import EjercicioVista
 
 if __name__ == "__main__":
-    vista = EntrenamientoVista()
+    vista = EjercicioVista()
     vista.menu_principal()
