@@ -1,10 +1,10 @@
 import json
 import os
 from typing import List, Optional
-from modelo import Entrenamiento
+from modelo import Ejercicio
 
-class EntrenamientoDAO:
-    def __init__(self, archivo_db="bd.json"):
+class EjercicioDAO:
+    def __init__(self, archivo_db="ejercicios.json"):
         self.archivo_db = archivo_db
         self._inicializar_bd()
 

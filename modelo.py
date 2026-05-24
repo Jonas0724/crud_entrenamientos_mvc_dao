@@ -1,11 +1,11 @@
-class Entrenamiento:
-    def __init__(self, id_entrenamiento: int, nombre: str, tipo: str):
-        self.id = id_entrenamiento
+class Ejercicio:
+    def __init__(self, id_ejercicio: int, nombre: str, tipo: str):
+        self.id = id_ejercicio
         self.nombre = nombre
         self.tipo = tipo
 
-    def to_dict(self):
-        """Convierte el objeto a diccionario para guardarlo en JSON fácilmente."""
+    def to_dict(self) -> dict:
+        """Convierte el objeto a diccionario para guardarlo en JSON."""
         return {
             "id": self.id,
             "nombre": self.nombre,
@@ -13,6 +13,10 @@ class Entrenamiento:
         }
 
     @staticmethod
-    def from_dict(data: dict):
-        """Crea una instancia de Producto a partir de un diccionario."""
-        return Entrenamiento(data["id"], data["nombre"], data["tipo"])
+    def from_dict(data: dict) -> "Ejercicio":
+        """Crea una instancia de Ejercicio desde un diccionario."""
+        return Ejercicio(
+            data["id"],
+            data["nombre"],
+            data["tipo"]
+        )
