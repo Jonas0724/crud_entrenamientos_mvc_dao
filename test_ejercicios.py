@@ -98,7 +98,8 @@ class TestEjercicioControlador(unittest.TestCase):
     def test_8_modificar_ejercicio_inexistente(self):
         """8. Intentar modificar un ejercicio que no existe en el JSON."""
         resultado = self.controlador.modificar_ejercicio(888, "Fantasma", "Ninguno")
-        self.assertIn("No encontrado", resultado)
+        print(f"\n[DEBUG TEST 8] El controlador respondió: {resultado}") 
+        self.assertIn("Ejercicio no encontrado", resultado)
 
     # ==========================================
     # 🗑️ PRUEBAS DE ELIMINACIÓN (DELETE)
